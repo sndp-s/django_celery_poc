@@ -1,0 +1,4 @@
+celery==5.4.0
+Django==5.0.4
+python-dotenv==1.0.1
+redis==5.0.4
