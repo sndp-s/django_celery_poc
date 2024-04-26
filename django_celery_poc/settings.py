@@ -126,3 +126,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Celery settings
 CELERY_BROKER_URL = "redis://localhost:6379"
 CELERY_RESULT_BACKEND = "redis://localhost:6379"
+CELERY_BEAT_SCHEDULE = {
+  'scheduled_intensive_task': {
+      'task': 'demoapp.tasks.intensive_task',
+      'schedule': 20.0,
+      'args': (),
+  },
+}
